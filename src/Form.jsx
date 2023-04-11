@@ -1,7 +1,8 @@
+import { toast } from 'react-toastify';
 import { nanoid } from 'nanoid';
 import { useState } from 'react';
 
-const Form = ({ setItems }) => {
+const Form = ({ setItems, saveToLS }) => {
   const [inputText, setInputText] = useState('');
 
   const handleSubmit = (e) => {
@@ -12,13 +13,18 @@ const Form = ({ setItems }) => {
       const newItem = {
         id: nanoid(),
         name: itemName,
-        complited: false,
+        completed: false,
       };
 
-      setItems((currVal) => [...currVal, newItem]);
+      setItems((currVal) => {
+        const newArr = [...currVal, newItem];
+
+        saveToLS(newArr);
+        return newArr;
+      });
       setInputText('');
     } else {
-      console.log('empty input');
+      toast.info('Invisible item added (NO 😛)');
     }
   };
 
@@ -30,6 +36,7 @@ const Form = ({ setItems }) => {
         <input
           type='text'
           className='form-input'
+          placeholder='What will it be?'
           value={inputText}
           onChange={(e) => {
             setInputText(e.target.value);
