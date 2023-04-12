@@ -16,7 +16,12 @@ const SingleItem = ({
         htmlFor={id}
         style={
           completed
-            ? { textTransform: 'capitalize', textDecoration: 'line-through' }
+            ? {
+                textTransform: 'capitalize',
+                textDecoration: 'line-through',
+                textDecorationColor: '#dd2e44',
+                textDecorationThickness: '2px',
+              }
             : { textTransform: 'capitalize' }
         }
       >

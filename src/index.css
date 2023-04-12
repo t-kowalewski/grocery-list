@@ -273,6 +273,16 @@ ul {
 
 /* ============= PROJECT CSS =============== */
 
+@font-face {
+  font-family: 'PrincessSofia';
+  src: local('PrincessSofia'), url(./fonts/PrincessSofia-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumPenScript';
+  src: local('NanumPenScript'), url(./fonts/NanumPenScript-Regular.ttf) format('truetype');
+}
+
 .section-center {
   width: 90vw;
   margin: 0 auto;
@@ -282,29 +292,35 @@ ul {
   background: var(--paper-color);
   border-radius: var(--borderRadius);
   padding: 2rem;
-  /* box-shadow: var(--shadow-1); */
   box-shadow: var(--shadow-3);
   transition: var(--transition);
 }
 
-/* .section-center:hover {
-  box-shadow: var(--shadow-3);
-} */
-
 form h4 {
+  font-family: PrincessSofia;
+  font-size: 1.85rem;
+  line-height: 1.5;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
 .form-control {
   display: grid;
-  grid-template-columns: 1fr 100px;
+  /* grid-template-columns: 1fr 100px; */
+  grid-template-columns: 3fr 1fr;
 }
 
 .form-input {
+  font-size: 1.25rem;
   border-radius: 0;
   border-top-left-radius: var(--borderRadius);
   border-bottom-left-radius: var(--borderRadius);
+}
+
+.form-input::placeholder {
+  font-family: NanumPenScript;
+  font-size: 1.5rem;
 }
 
 .form-control .btn {
@@ -326,8 +342,10 @@ form h4 {
   align-items: center;
 }
 
-.single-item p {
+.single-item label {
   letter-spacing: var(--letterSpacing);
+  font-family: NanumPenScript;
+  font-size: 1.85rem;
 }
 
 .remove-btn {
@@ -338,4 +356,8 @@ form h4 {
 
 .Toastify__toast {
   text-transform: capitalize;
+}
+
+.Toastify__toast-theme--light {
+  background-color: var(--grey-100);
 }
