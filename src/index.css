@@ -298,7 +298,7 @@ ul {
 
 form h4 {
   font-family: PrincessSofia;
-  font-size: 1.85rem;
+  font-size: 1.95rem;
   line-height: 1.5;
   font-weight: bold;
   text-align: center;
@@ -312,7 +312,7 @@ form h4 {
 }
 
 .form-input {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   border-radius: 0;
   border-top-left-radius: var(--borderRadius);
   border-bottom-left-radius: var(--borderRadius);
@@ -351,7 +351,7 @@ form h4 {
 .single-item label {
   letter-spacing: var(--letterSpacing);
   font-family: NanumPenScript;
-  font-size: 1.85rem;
+  font-size: 2rem;
 }
 
 .remove-btn {
@@ -359,7 +359,7 @@ form h4 {
   color: var(--grey-600);
   background-color: transparent;
   border-style: none;
-  font-size: 1rem;
+  font-size: 1.15rem;
   box-shadow: none;
 }
 
@@ -375,5 +375,11 @@ form h4 {
   .btn:hover {
     background: var(--primary-700);
     box-shadow: var(--shadow-3);
+  }
+
+  .remove-btn:hover {
+    background-color: transparent;
+    color: var(--red-dark);
+    box-shadow: none;
   }
 }
