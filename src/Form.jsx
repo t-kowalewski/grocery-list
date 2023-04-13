@@ -1,3 +1,4 @@
+import { FaPlus } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import { nanoid } from 'nanoid';
 import { useState } from 'react';
@@ -43,8 +44,11 @@ const Form = ({ setItems, saveToLS }) => {
           }}
         />
 
-        <button type='submit' className='btn'>
+        {/* <button type='submit' className='btn'>
           Add
+        </button> */}
+        <button type='submit' className='btn'>
+          <FaPlus />
         </button>
       </div>
     </form>

@@ -1,3 +1,5 @@
+import { FaTrashAlt } from 'react-icons/fa';
+
 const SingleItem = ({
   itemInfo: { id, name, completed },
   handleDelItem,
@@ -28,9 +30,13 @@ const SingleItem = ({
         {name}
       </label>
 
-      <button className='btn remove-btn' onClick={() => handleDelItem(id)}>
+      {/* <button className='btn remove-btn' onClick={() => handleDelItem(id)}>
         Delete
+      </button> */}
+      <button className='btn remove-btn' onClick={() => handleDelItem(id)}>
+        <FaTrashAlt />
       </button>
+      {/* <FaTrashAlt onClick={() => handleDelItem(id)} /> */}
     </div>
   );
 };
