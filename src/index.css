@@ -279,8 +279,8 @@ ul {
 }
 
 @font-face {
-  font-family: 'NanumPenScript';
-  src: local('NanumPenScript'), url(./fonts/nanum-pen-script-v19-latin-regular.woff2) format('woff2');
+  font-family: 'DeliusSwashCaps';
+  src: local('DeliusSwashCaps'), url(./fonts/delius-swash-caps-v19-latin-regular.woff2) format('woff2');
 }
 
 .section-center {
@@ -319,8 +319,8 @@ form h4 {
 }
 
 .form-input::placeholder {
-  font-family: NanumPenScript;
-  font-size: 1.5rem;
+  font-family: DeliusSwashCaps;
+  font-size: 1.45rem;
 }
 
 .form-control .btn {
@@ -350,8 +350,8 @@ form h4 {
 
 .single-item label {
   letter-spacing: var(--letterSpacing);
-  font-family: NanumPenScript;
-  font-size: 2rem;
+  font-family: DeliusSwashCaps;
+  font-size: 1.55rem;
 }
 
 .remove-btn {
